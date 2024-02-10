@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/asset/css/output.css">
+  <script src="https://kit.fontawesome.com/bab91a73d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+
+  <div id="searchBar" class="text-center bg-white w-full hidden absolute ">
+    <input type="search" id="searchInput" placeholder="Search" class=" p-2 my-5 border border-black w-1/2 rounded-md">
+    <i onclick="searchProducts()" class="fa-solid fa-magnifying-glass mx-2 text-2xl cursor-pointer transition-transform hover:scale-110"></i>
+    <i onclick="closeSearch()" class="fa-solid fa-xmark text-2xl transition-transform hover:scale-110 cursor-pointer"></i>
+  </div>
+ 
+  <nav class="border flex flex-row w-full shadow-sm p-2 items-center justify-center">
+    <div class="relative inline-block text-left px-6">
+      <button onclick="menu()" type="button" class="inline-flex items-center justify-center px-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-gray-100 active:border-gray-200">
+        <i class="fa-solid fa-bars text-2xl "></i>
+      </button>
+ 
+        <!-- Menu List -->
+        <ul id="listMenu" class="absolute border p-5 hidden mt-3 w-52 bg-white">
+          <li>
+            <a href="" class="block p-2 text-gray-700 hover:bg-gray-100">About Us</a>
+          </li>
+          <li>
+            <a href="" class="block p-2 text-gray-700 hover:bg-gray-100">Contact Us</a>
+          </li>
+          <li>
+            <p onclick="logout()" class="block py-2 hover:bg-gray-100 hover:border-black hover:text-black mt-5 border text-center bg-red-500 text-white rounded-md cursor-pointer">Logout</p>
+          </li>
+        </ul>
+        <!--  -->
+
+    </div>
+    <div class="pr-4"><a href="index.html">Home</a></div>
+    <div class="pr-1">Category </div>
+    <div>
+    <i onclick="listCategory()" id="arrow" class="fa-solid fa-chevron-down cursor-pointer transform transition-transform duration-300"></i>
+    
+      <!-- Category List -->
+      <ul id="listCategory" class="absolute hidden border p-5 mt-3 w-52 bg-white leading-loose">
+        <li class="block p-2 text-gray-700 hover:bg-gray-100 cursor-pointer"><a href="index.html">All Product</a> </li>
+        <li class="block p-2 text-gray-700 hover:bg-gray-100 cursor-pointer" onclick="sortCategory(`men's clothing`)" id="men">Men's Clothing</li>
+        <li class="block p-2 text-gray-700 hover:bg-gray-100 cursor-pointer" onclick="sortCategory(`women's clothing`)" id="women">Women's Clothing</li>
+        <li class="block p-2 text-gray-700 hover:bg-gray-100 cursor-pointer" onclick="sortCategory(`jewelery`)" id="jewelery">Jewelery</li>
+        <li class="block p-2 text-gray-700 hover:bg-gray-100 cursor-pointer" onclick="sortCategory(`electronics`)">Electronics</li>
+      </ul>
+      <!--  -->
+    </div>
+
+    <div class="mx-auto"></div>
+
+    <div>
+      <i onclick="openSearch()" class="fa-solid fa-magnifying-glass text-2xl cursor-pointer transition-transform hover:scale-110"></i>
+    </div>
+    <div class="px-6">
+      <i class="fa-solid fa-cart-shopping text-2xl"></i>
+
+
+    </div>
+    </div>
+  </nav>
+</header>
+
+<main class="max-w-7xl mx-auto overflow-hidden p-6">
+
+  <p class="text-5xl mb-5" id="textAll">All Product</p>
+  <p class="mb-10">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam obcaecati odit vero doloremque tenetur at modi quaerat repellendus dolores! Inventore quasi laboriosam amet, perspiciatis delectus earum ut natus voluptatem magnam. At consequuntur illo maiores. Sit hic itaque culpa libero eligendi repudiandae velit quaerat neque dignissimos quis doloribus, dolorum rem.
+  </p>
+
+  <div id="allProduct" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:max-w-5xl md:max-w-3xl sm:max-w-lg mx-auto">
+  </div>
+  
+
+  <div id="sortCategory" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:max-w-5xl md:max-w-3xl sm:max-w-lg mx-auto">
+  </div>
+
+  <div id="searchResult" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:max-w-5xl md:max-w-3xl sm:max-w-lg mx-auto">
+  </div>
+  
+</main>
+<footer class="border-t  flex h-12 items-center justify-center mt-36">
+  <p>&copy; 2024 My Company. All rights reserved.</p>
+</footer>
+  <script src="asset/js/app.js"></script>
+  <script src="asset/js/api.js"></script>
+</body>
+</html>

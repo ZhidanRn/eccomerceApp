@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="asset/css/output.css">
+</head>
+<body>
+    <div class="mx-w-md mx-auto min-h-screen flex items-center justify-center">
+        <div class=" sm:rounded-3xl sm:shadow-lg  ">
+
+            <div class="sm:w-[456px] sm:h-[80%]">
+                <div class="mx-w-md mx-auto p-12">  
+        
+                    <form>
+                        <div class="px-4 pb-2 text-xs">Username</div>
+                        <input type="text" id="regUser" placeholder="Enter Username" class="bg-gray-100 w-full border rounded py-2 px-4 text-sm" required>
+
+                        <div class="px-4 pt-4 pb-2 text-xs">Password</div>
+                        <input type="password" id="regPass" placeholder="Enter Password" class="lg:mt-0 bg-gray-100 w-full border rounded py-2 px-4 text-sm" required>
+
+                        <div class="px-4 pt-4 pb-2 text-xs">Confirm Password</div>
+                        <input type="password" id="regConf" placeholder="Confirm Password" class="lg:mt-0 bg-gray-100 w-full border rounded py-2 px-4 text-sm" required>
+
+                        <button type="button" onclick="register()" class="border w-full bg-[#8053FF] rounded-lg py-2 cursor-pointer text-slate-100 font-medium mt-4">Sign up</button>
+
+
+                            <p class="text-center text-xs mt-12">Already have an account? <a href="login.html" class="text-blue-600 tracking-wider">Sign in now</a></p>
+
+                    </form>
+                </div>
+            </div>  
+        </div>
+
+    </div>
+
+    <script src="asset/js/auth.js"></script>
+</body>
+</html>

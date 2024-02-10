@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bab91a73d1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div id="searchBar" class="text-center bg-white w-full hidden absolute ">
+    <input type="search" id="searchInput" placeholder="Search" class=" p-2 my-5 border border-black w-1/2 rounded-md">
+    <i onclick="searchProducts()" class="fa-solid fa-magnifying-glass mx-2 text-2xl cursor-pointer transition-transform hover:scale-110"></i>
+    <i onclick="closeSearch()" class="fa-solid fa-xmark text-2xl transition-transform hover:scale-110 cursor-pointer"></i>
+  </div>
+ 
+  <nav class="border flex flex-row w-full shadow-sm p-2 items-center justify-center">
+    <div class="relative inline-block text-left px-6">
+      <button onclick="menu()" type="button" class="inline-flex items-center justify-center px-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-gray-100 active:border-gray-200">
+        <i class="fa-solid fa-bars text-2xl "></i>
+      </button>
+
+        <!-- Menu List -->
+        <ul id="listMenu" class="absolute border p-5 hidden mt-3 w-52 bg-white">
+          <li>
+            <a href="" class="block p-2 text-gray-700 hover:bg-gray-100">About Us</a>
+          </li>
+          <li>
+            <a href="" class="block p-2 text-gray-700 hover:bg-gray-100">Contact Us</a>
+          </li>
+          <li>
+            <a href="" class="block py-2 hover:bg-gray-100 hover:border-black hover:text-black mt-5 border text-center bg-red-500 text-white rounded-md">Logout</a>
+          </li>
+        </ul>
+        <!--  -->
+
+    </div>
+    <div class="pr-4"><a href="index.html">Home</a></div>
+
+    <div class="mx-auto"></div>
+
+    <div>
+      <i onclick="openSearch()" class="fa-solid fa-magnifying-glass text-2xl cursor-pointer transition-transform hover:scale-110"></i>
+    </div>
+    <div class="px-6">
+      <i class="fa-solid fa-cart-shopping text-2xl"></i>
+    </div>
+    </div>
+  </nav>
+</header>
+    
+      <main class=" mx-auto overflow-hidden p-6">
+      
+        <div id="show" class="flex-row lg:flex items-center justify-center tracking-wide">
+            <div id="img" class="w-[50%] md:w-[30%] mx-auto lg:mx-0 lg:min-h-screen">
+            </div>
+            <div class="lg:w-[30%] lg:p-8 lg:min-h-screen">
+                <p id="title" class="text-3xl font-semibold "></p>
+                <p id="price" class="text-2xl my-2"></p>
+                <p class="font-light ml-2">Quantity:</p>
+                <div class="h-12 flex m-2 border border-black w-max rounded-md">
+                  <i id="decrement" onclick="decrement()" class="fa-solid fa-minus mx-4 border-gray-700 flex items-center justify-center cursor-pointer"></i>
+                  <input type="text" class="w-14 text-center" id="inputQty" value="1"/>
+                  <i id="increment" onclick="increment()" class="fa-solid fa-plus mx-4 border-gray-100 flex items-center justify-center cursor-pointer"></i>
+                </div>
+                <button onclick="showData()" class="bg-purple-700 p-2 text-white w-full rounded">Add To Chart</button>
+
+                <p class="text-xl mt-5">Description:</p>
+                <p id="description" class="leading-loose"></p>
+            </div>
+        </div>
+      </main>
+
+      <footer class="border-t  flex h-12 items-center justify-center mt-36">
+        <p>&copy; 2024 My Company. All rights reserved.</p>
+      </footer>
+
+    <script src="./asset/js/app.js"></script>
+    <script src="./asset/js/api.js"></script>
+
+</body>
+</html>
